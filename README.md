@@ -1,4 +1,8 @@
 # SI_2022_lab2_202023
+Втора лабараториска вежба по Софтверско Инженерство
+
+Мартин Марјановиќ, бр. на индекс 202023
+
 Control Flow Graph
 ![Lab2CFG](https://user-images.githubusercontent.com/100298572/169811875-9a33af2a-b112-4768-83aa-4d258f13dd28.png)
 
