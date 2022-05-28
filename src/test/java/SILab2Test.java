@@ -1,16 +1,37 @@
 import org.junit.jupiter.api.Test;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import static java.util.Arrays.asList;
 import static org.junit.jupiter.api.Assertions.*;
 public class SILab2Test {
     @Test
-    public void test1() {
-        assertEquals(SILab2.function(2),"POSITIVE");
-        assertEquals(SILab2.function(-2),"NEGATIVE");
-        assertEquals(SILab2.function(0),"ZERO");
+    void everyStatementTest(){
+        IllegalArgumentException ex;
+
+        ex = assertThrows(IllegalArgumentException.class, () -> SILab2.function(List.of()));
+        assertTrue(ex.getMessage().contains("List length should be greater than 0"));
+
+        ex = assertThrows(IllegalArgumentException.class, () -> SILab2.function(asList("#","0")));
+        assertTrue(ex.getMessage().contains("List length should be a perfect square"));
+
+        assertEquals(Arrays.asList( "#", "2", "#","2", "1", "#","#", "1", "1" ), SILab2.function(Arrays.asList("#", "0", "#", "0", "0", "#", "#", "0", "0")));
     }
+
     @Test
-    public void test2() {
-        assertEquals(SILab2.function(77),"POSITIVE");
-        assertEquals(SILab2.function(-22),"NEGATIVE");
-        assertEquals(SILab2.function(0),"ZERO");
+    void everyBranchTest(){
+        IllegalArgumentException ex;
+
+        ex = assertThrows(IllegalArgumentException.class, () -> SILab2.function(List.of()));
+        assertTrue(ex.getMessage().contains("List length should be greater than 0"));
+
+        ex = assertThrows(IllegalArgumentException.class, () -> SILab2.function(asList("#","0")));
+        assertTrue(ex.getMessage().contains("List length should be a perfect square"));
+
+        assertEquals(Arrays.asList("#", "2", "#","2", "1", "#","#", "1", "1"), SILab2.function(Arrays.asList("#", "0", "#", "0", "0", "#", "#", "0", "0")));
     }
+
 }
