@@ -9,13 +9,14 @@ Control Flow Graph
 Цикломатска комплексност
 E=32
 V=25
-Ја искористив формлата E-V+2 и добив дека цикломатската комплексност е 10.
+Ја искористив формлата E-V+2 и добив дека цикломатската комплексност е 9.
 
 Тест случаи според критериумот Every statement
 
 [Lab_2_SI.xlsx](https://github.com/MARtinMarjan/SI_2022_lab2_202023/files/8754237/Lab_2_SI.xlsx)
 
 Тест случаи според критериумот Every path
+
 [Lab_2_SI.xlsx](https://github.com/MARtinMarjan/SI_2022_lab2_202023/files/8754239/Lab_2_SI.xlsx)
 
 Објаснување на напишаните unit tests
