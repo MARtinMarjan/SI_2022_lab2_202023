@@ -4,20 +4,17 @@
 <h2>Мартин Марјановиќ, бр. на индекс 202023</h2>
 
 **Control Flow Graph**
-![Lab2CFG](https://user-images.githubusercontent.com/100298572/169811875-9a33af2a-b112-4768-83aa-4d258f13dd28.png)
+
+![CFGPRAVILEN](https://user-images.githubusercontent.com/100298572/171619813-474aa8ba-0a25-4055-b3ad-877c02ad51bb.png)
 
 **Цикломатска комплексност**
-E=32
-V=25
-Ја искористив формлата E-V+2 и добив дека цикломатската комплексност е 9.
+P=8+1
+Цикломатската комплексност е 9
+Ја искористив формулата за предикатни јазли P+1
 
-**Тест случаи според критериумот Every statement**
+**Тест случаи според критериумот Every statement и Every path**
 
-[Lab_2_SI.xlsx](https://github.com/MARtinMarjan/SI_2022_lab2_202023/files/8754237/Lab_2_SI.xlsx)
-
-**Тест случаи според критериумот Every path**
-
-[Lab_2_SI.xlsx](https://github.com/MARtinMarjan/SI_2022_lab2_202023/files/8754239/Lab_2_SI.xlsx)
+[Lab_2_SI.xlsx](https://github.com/MARtinMarjan/SI_2022_lab2_202023/files/8823351/Lab_2_SI.xlsx)
 
 **Објаснување на напишаните unit tests**
 
