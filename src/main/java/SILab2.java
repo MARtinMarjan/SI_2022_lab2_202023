@@ -3,39 +3,38 @@ import java.util.List;
 
 public class SILab2 {
 
-    public static List<String> function(List<String> list) {
-        if (list.size() <= 0) {
-            throw new IllegalArgumentException("List length should be greater than 0");
+    public static List<String> function(List<String> list) { //A
+        if (list.size() <= 0) { //A
+            throw new IllegalArgumentException("List length should be greater than 0"); //B
         }
-        int n = list.size();
-        int rootOfN = (int) Math.sqrt(n);
-        if (rootOfN * rootOfN  != n) {
-            throw new IllegalArgumentException("List length should be a perfect square");
+        int n = list.size(); //C
+        int rootOfN = (int) Math.sqrt(n); //C
+        if (rootOfN * rootOfN != n) { //D
+            throw new IllegalArgumentException("List length should be a perfect square"); //E
         }
-        List<String> numMines = new ArrayList<>();
-        for (int i = 0; i < n; i++) {
-            if (!list.get(i).equals("#")) {
-                int num = 0;
-                if ( (i % rootOfN != 0 && list.get(i - 1).equals("#")) || (i % rootOfN != rootOfN - 1 && list.get(i + 1).equals("#")) ) {
-                    if ( (i % rootOfN != 0 && list.get(i - 1).equals("#")) && (i % rootOfN != rootOfN - 1 && list.get(i + 1).equals("#")) ){
-                        num += 2;
+        List<String> numMines = new ArrayList<>(); //F
+        for (int i = 0; i < n; i++) { //G
+            if (!list.get(i).equals("#")) { //H
+                int num = 0; //I.1
+                if ((i % rootOfN != 0 && list.get(i - 1).equals("#")) || (i % rootOfN != rootOfN - 1 && list.get(i + 1).equals("#"))) { //I.2
+                    if ((i % rootOfN != 0 && list.get(i - 1).equals("#")) && (i % rootOfN != rootOfN - 1 && list.get(i + 1).equals("#"))) { //J
+                        num += 2; //K
+                    } else { //L
+                        num += 1; //M
                     }
-                    else {
-                        num  += 1;
-                    }
                 }
-                if (i - rootOfN >= 0 && list.get(i - rootOfN).equals("#")){
-                    num++;
+                if (i - rootOfN >= 0 && list.get(i - rootOfN).equals("#")) { //N
+                    num++; //O
                 }
-                if (i + rootOfN < n && list.get(i + rootOfN).equals("#")){
-                    num++;
+                if (i + rootOfN < n && list.get(i + rootOfN).equals("#")) { //P
+                    num++; //Q
                 }
-                numMines.add(String.valueOf(num));
+                numMines.add(String.valueOf(num)); //R
+            } else { //S
+                numMines.add(list.get(i)); //T
             }
-            else {
-                numMines.add(list.get(i));
-            }
-        }
-        return numMines;
-    }
+        } //W
+        return numMines; //U
+    } //KRAJ
+
 }
